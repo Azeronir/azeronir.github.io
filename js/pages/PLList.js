@@ -1,7 +1,7 @@
 import { store } from '../main.js';
 import { embed } from '../util.js';
 import { score } from '../score.js';
-import { fetchEditors, fetchCHList } from '../content.js';
+import { fetchEditors, fetchPLList } from '../content.js';
 
 import Spinner from '../components/Spinner.js';
 import LevelAuthors from '../components/List/LevelAuthors.js';
@@ -103,9 +103,9 @@ export default {
                             </li>
                         </ol>
                     </template>
-                    <h3> Правила челлендж листа </h3>
+                    <h3> Правила платформер листа </h3>
                     <p> Когда вы отправляете рекорд убедитесь что соблюдайте эти правила:</p>
-                    <p> - TODO: правила чл. листа </p>
+                    <p> - TODO: тут должны быть правила пл. листа </p>
                     <p> </p>
                     <p> All credit goes to The Shitty list. WEList is not affiliated with The Shitty list. </p>
                 </div>
@@ -138,7 +138,7 @@ export default {
 	},
 	async mounted() {
 		// Hide loading spinner
-		this.list = await fetchCHList();
+		this.list = await fetchPLList();
 		this.editors = await fetchEditors();
 
 		// Error handling
