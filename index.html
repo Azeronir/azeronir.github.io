@@ -1,75 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=1024" />
-    <meta property="og:title" content="WEGDPS List" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="dot.GDS" />
     <meta property="og:description"
-        content="Лист сложнейших уровней на WEGDPS." />
+        content="Официальный сайт проекта dot." />
     <meta property="og:url" content="https://azeronir.github.io" />
-    <meta property="og:image" content="/we_icon.png" />
-    <title>WEList</title>
-    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:image" content="/dotlogo.png" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/css/reset.css" />
-    <link rel="stylesheet" type="text/css" href="/css/typography.css" />
-    <link rel="stylesheet" type="text/css" href="/css/main.css" />
-    <link rel="stylesheet" type="text/css" href="/css/pages/list.css" />
-    <link rel="stylesheet" type="text/css" href="/css/pages/leaderboard.css" />
-    <link rel="stylesheet" type="text/css" href="/css/pages/roulette.css" />
-    <link rel="stylesheet" type="text/css" href="/css/components/nav.css" />
-    <link rel="stylesheet" type="text/css" href="/css/components/btn.css" />
-    <link rel="stylesheet" type="text/css" href="/css/components/tabs.css" />
-    <script src="https://unpkg.com/vue@3.2.31/dist/vue.global.js"></script>
-    <script src="https://unpkg.com/vue-router@4.0.14/dist/vue-router.global.prod.js"></script>
-    <script type="module" src="/js/main.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>dot.</title>
 </head>
-<body id="app">
-    <div class="root" :class="{ dark: store.dark }">
-        <header class="surface">
-            <div class="logo">
-                <img src="/WEGDPSLIST.png" alt="logo" />
-            </div>
-            <nav class="nav">
-                <router-link class="nav__tab" to="/">
-                    <span class="type-label-lg">Демон лист</span>
-                </router-link>
-                <router-link class="nav__tab" to="/ch">
-                    <span class="type-label-lg">Челлендж лист</span>
-                </router-link>
-                <router-link class="nav__tab" to="/pl">
-                    <span class="type-label-lg">Платформер лист</span>
-                </router-link>
-                <router-link class="nav__tab" to="/leaderboard">
-                    <span class="type-label-lg">Таблица лидеров</span>
-                </router-link>
-                <router-link class="nav__tab" to="/roulette">
-                    <span class="type-label-lg">Рулетка</span>
-                </router-link>
-                <div class="nav__actions">
-                    <button
-                        class="nav__icon"
-                        @click.prevent="store.toggleDark()"
-                    >
-                        <img
-                            :src="store.dark ? '/assets/light.svg' : '/assets/dark.svg'"
-                            alt=""
-                        />
-                    </button>
-                    <a class="nav__icon" href="https://discord.gg/dxCVJB6rt6">
-                        <img src="/assets/discord.svg" alt="Discord Logo" />
-                    </a>
-                    <a class="nav__cta type-label-lg"
-                        href="https://forms.gle/uCv88TE9wqfYN6kL8"
-                        target="_blank">Отправить рекорд?</a>
-                </div>
-            </nav>
-        </header>
-        <router-view></router-view>
-    </div>
+<body>
+    <section>
+        <div class="blob">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <defs>
+                  <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset='0' stop-color='red'>
+                        <animate attributeName="stop-color"
+                           values="red;purple;blue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <stop offset='.5' stop-color='purple'>
+                        <animate attributeName="stop-color"
+                           values="purple;blue;green;yellow;orange;red;purple;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <stop offset='1' stop-color='blue'>
+                        <animate attributeName="stop-color"
+                           values="blue;green;yellow;orange;red;purple;blue;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5"
+                        dur="20s" repeatCount="indefinite" />
+                  </linearGradient>
+                  <linearGradient id="gradient2" x1="0" y1="1" x2="1" y2="1">
+                    <stop offset='0' stop-color='red'>
+                        <animate attributeName="stop-color"
+                           values="red;purple;blue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <stop offset='1' stop-color='purple' stop-opacity="0">
+                        <animate attributeName="stop-color"
+                           values="purple;blue;green;yellow;orange;red;purple;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <animateTransform attributeName="gradientTransform" type="rotate" values="360 .5 .5;0 .5 .5" class="ignore"
+                        dur="10s" repeatCount="indefinite" />
+                  </linearGradient>
+                </defs>
+                <path fill="url(#gradient)">
+                    <animate attributeName="d"
+                        dur="20000ms"
+                        repeatCount="indefinite"
+                        values="M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z;
+                        M405,304.5Q400,359,358.5,407.5Q317,456,245,471Q173,486,138,421.5Q103,357,92,303.5Q81,250,99.5,202Q118,154,160,128.5Q202,103,263.5,60.5Q325,18,383.5,64Q442,110,426,180Q410,250,405,304.5Z;
+                        M449.47764,312.87226Q423.02372,375.74452,370.53513,417.96533Q318.04653,460.18613,255.98859,442.22035Q193.93066,424.25457,129.10447,404.75548Q64.27829,385.25639,73.16241,317.62819Q82.04653,250,91.651,196.24407Q101.25548,142.48814,144.30201,99.72035Q187.34854,56.95256,246.23221,69.39553Q305.11588,81.8385,367.80201,100.10538Q430.48814,118.37226,453.20985,184.18613Q475.93157,250,449.47764,312.87226Z;
+                        M432.71923,298.70461Q384.55538,347.40922,341.91653,375.12845Q299.27769,402.84768,241.21192,429.70461Q183.14615,456.56155,127.52923,417.81731Q71.91231,379.07308,40.00422,314.53654Q8.09614,250,54.55538,195.51462Q101.01462,141.02923,143.02923,95.08769Q185.04385,49.14615,254.39039,35.98961Q323.73693,22.83306,377.36846,70.90922Q431,118.98538,455.94154,184.49269Q480.88308,250,432.71923,298.70461Z;
+                        M406,299Q385,348,353.5,410.5Q322,473,261,439Q200,405,130.5,396Q61,387,53.5,318.5Q46,250,72,195Q98,140,146,108.5Q194,77,252.5,69Q311,61,358.5,99Q406,137,416.5,193.5Q427,250,406,299Z;
+                        M430,298Q382,346,353,412Q324,478,261.5,442.5Q199,407,127,399.5Q55,392,46,321Q37,250,68,195Q99,140,139.5,86.5Q180,33,240.5,62.5Q301,92,339.5,124.5Q378,157,428,203.5Q478,250,430,298Z;
+                        M430.5,300Q388,350,353,405.5Q318,461,259.5,430.5Q201,400,128,396Q55,392,48.5,321Q42,250,58,186Q74,122,134.5,101Q195,80,253,71Q311,62,345,109Q379,156,426,203Q473,250,430.5,300Z;
+                        M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z">
+                </animate>
+                </path>
+                <path fill="url(#gradient2)">
+                    <animate attributeName="d"
+                        dur="20000ms"
+                        repeatCount="indefinite"
+                        values="M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z;
+                        M405,304.5Q400,359,358.5,407.5Q317,456,245,471Q173,486,138,421.5Q103,357,92,303.5Q81,250,99.5,202Q118,154,160,128.5Q202,103,263.5,60.5Q325,18,383.5,64Q442,110,426,180Q410,250,405,304.5Z;
+                        M449.47764,312.87226Q423.02372,375.74452,370.53513,417.96533Q318.04653,460.18613,255.98859,442.22035Q193.93066,424.25457,129.10447,404.75548Q64.27829,385.25639,73.16241,317.62819Q82.04653,250,91.651,196.24407Q101.25548,142.48814,144.30201,99.72035Q187.34854,56.95256,246.23221,69.39553Q305.11588,81.8385,367.80201,100.10538Q430.48814,118.37226,453.20985,184.18613Q475.93157,250,449.47764,312.87226Z;
+                        M432.71923,298.70461Q384.55538,347.40922,341.91653,375.12845Q299.27769,402.84768,241.21192,429.70461Q183.14615,456.56155,127.52923,417.81731Q71.91231,379.07308,40.00422,314.53654Q8.09614,250,54.55538,195.51462Q101.01462,141.02923,143.02923,95.08769Q185.04385,49.14615,254.39039,35.98961Q323.73693,22.83306,377.36846,70.90922Q431,118.98538,455.94154,184.49269Q480.88308,250,432.71923,298.70461Z;
+                        M406,299Q385,348,353.5,410.5Q322,473,261,439Q200,405,130.5,396Q61,387,53.5,318.5Q46,250,72,195Q98,140,146,108.5Q194,77,252.5,69Q311,61,358.5,99Q406,137,416.5,193.5Q427,250,406,299Z;
+                        M430,298Q382,346,353,412Q324,478,261.5,442.5Q199,407,127,399.5Q55,392,46,321Q37,250,68,195Q99,140,139.5,86.5Q180,33,240.5,62.5Q301,92,339.5,124.5Q378,157,428,203.5Q478,250,430,298Z;
+                        M430.5,300Q388,350,353,405.5Q318,461,259.5,430.5Q201,400,128,396Q55,392,48.5,321Q42,250,58,186Q74,122,134.5,101Q195,80,253,71Q311,62,345,109Q379,156,426,203Q473,250,430.5,300Z;
+                        M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z">
+                </animate>
+                </path>
+              </svg>
+        </div>
+        <!--глоу эффект-->
+        <div class="blob">
+            <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" id="blobSvg">
+                <defs>
+                  <linearGradient id="gradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset='0' stop-color='red'>
+                        <animate attributeName="stop-color"
+                           values="red;purple;blue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <stop offset='.5' stop-color='purple'>
+                        <animate attributeName="stop-color"
+                           values="purple;blue;green;yellow;orange;red;purple;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <stop offset='1' stop-color='blue'>
+                        <animate attributeName="stop-color"
+                           values="blue;green;yellow;orange;red;purple;blue;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5"
+                        dur="20s" repeatCount="indefinite" />
+                  </linearGradient>
+                  <linearGradient id="gradient2" x1="0" y1="1" x2="1" y2="1">
+                    <stop offset='0' stop-color='red'>
+                        <animate attributeName="stop-color"
+                           values="red;purple;blue;green;yellow;orange;red;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <stop offset='1' stop-color='purple' stop-opacity="0">
+                        <animate attributeName="stop-color"
+                           values="purple;blue;green;yellow;orange;red;purple;" dur="20s" repeatCount="indefinite">
+                        </animate>
+                     </stop>
+                     <animateTransform attributeName="gradientTransform" type="rotate" values="360 .5 .5;0 .5 .5" class="ignore"
+                        dur="10s" repeatCount="indefinite" />
+                  </linearGradient>
+                </defs>
+                <path fill="url(#gradient)">
+                    <animate attributeName="d"
+                        dur="20000ms"
+                        repeatCount="indefinite"
+                        values="M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z;
+                        M405,304.5Q400,359,358.5,407.5Q317,456,245,471Q173,486,138,421.5Q103,357,92,303.5Q81,250,99.5,202Q118,154,160,128.5Q202,103,263.5,60.5Q325,18,383.5,64Q442,110,426,180Q410,250,405,304.5Z;
+                        M449.47764,312.87226Q423.02372,375.74452,370.53513,417.96533Q318.04653,460.18613,255.98859,442.22035Q193.93066,424.25457,129.10447,404.75548Q64.27829,385.25639,73.16241,317.62819Q82.04653,250,91.651,196.24407Q101.25548,142.48814,144.30201,99.72035Q187.34854,56.95256,246.23221,69.39553Q305.11588,81.8385,367.80201,100.10538Q430.48814,118.37226,453.20985,184.18613Q475.93157,250,449.47764,312.87226Z;
+                        M432.71923,298.70461Q384.55538,347.40922,341.91653,375.12845Q299.27769,402.84768,241.21192,429.70461Q183.14615,456.56155,127.52923,417.81731Q71.91231,379.07308,40.00422,314.53654Q8.09614,250,54.55538,195.51462Q101.01462,141.02923,143.02923,95.08769Q185.04385,49.14615,254.39039,35.98961Q323.73693,22.83306,377.36846,70.90922Q431,118.98538,455.94154,184.49269Q480.88308,250,432.71923,298.70461Z;
+                        M406,299Q385,348,353.5,410.5Q322,473,261,439Q200,405,130.5,396Q61,387,53.5,318.5Q46,250,72,195Q98,140,146,108.5Q194,77,252.5,69Q311,61,358.5,99Q406,137,416.5,193.5Q427,250,406,299Z;
+                        M430,298Q382,346,353,412Q324,478,261.5,442.5Q199,407,127,399.5Q55,392,46,321Q37,250,68,195Q99,140,139.5,86.5Q180,33,240.5,62.5Q301,92,339.5,124.5Q378,157,428,203.5Q478,250,430,298Z;
+                        M430.5,300Q388,350,353,405.5Q318,461,259.5,430.5Q201,400,128,396Q55,392,48.5,321Q42,250,58,186Q74,122,134.5,101Q195,80,253,71Q311,62,345,109Q379,156,426,203Q473,250,430.5,300Z;
+                        M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z">
+                </animate>
+                </path>
+                <path fill="url(#gradient2)">
+                    <animate attributeName="d"
+                        dur="20000ms"
+                        repeatCount="indefinite"
+                        values="M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z;
+                        M405,304.5Q400,359,358.5,407.5Q317,456,245,471Q173,486,138,421.5Q103,357,92,303.5Q81,250,99.5,202Q118,154,160,128.5Q202,103,263.5,60.5Q325,18,383.5,64Q442,110,426,180Q410,250,405,304.5Z;
+                        M449.47764,312.87226Q423.02372,375.74452,370.53513,417.96533Q318.04653,460.18613,255.98859,442.22035Q193.93066,424.25457,129.10447,404.75548Q64.27829,385.25639,73.16241,317.62819Q82.04653,250,91.651,196.24407Q101.25548,142.48814,144.30201,99.72035Q187.34854,56.95256,246.23221,69.39553Q305.11588,81.8385,367.80201,100.10538Q430.48814,118.37226,453.20985,184.18613Q475.93157,250,449.47764,312.87226Z;
+                        M432.71923,298.70461Q384.55538,347.40922,341.91653,375.12845Q299.27769,402.84768,241.21192,429.70461Q183.14615,456.56155,127.52923,417.81731Q71.91231,379.07308,40.00422,314.53654Q8.09614,250,54.55538,195.51462Q101.01462,141.02923,143.02923,95.08769Q185.04385,49.14615,254.39039,35.98961Q323.73693,22.83306,377.36846,70.90922Q431,118.98538,455.94154,184.49269Q480.88308,250,432.71923,298.70461Z;
+                        M406,299Q385,348,353.5,410.5Q322,473,261,439Q200,405,130.5,396Q61,387,53.5,318.5Q46,250,72,195Q98,140,146,108.5Q194,77,252.5,69Q311,61,358.5,99Q406,137,416.5,193.5Q427,250,406,299Z;
+                        M430,298Q382,346,353,412Q324,478,261.5,442.5Q199,407,127,399.5Q55,392,46,321Q37,250,68,195Q99,140,139.5,86.5Q180,33,240.5,62.5Q301,92,339.5,124.5Q378,157,428,203.5Q478,250,430,298Z;
+                        M430.5,300Q388,350,353,405.5Q318,461,259.5,430.5Q201,400,128,396Q55,392,48.5,321Q42,250,58,186Q74,122,134.5,101Q195,80,253,71Q311,62,345,109Q379,156,426,203Q473,250,430.5,300Z;
+                        M426.5,302.5Q395,355,358.5,413.5Q322,472,257,450Q192,428,145,394.5Q98,361,76,305.5Q54,250,88.5,203.5Q123,157,158,115Q193,73,248.5,79Q304,85,371.5,99Q439,113,448.5,181.5Q458,250,426.5,302.5Z">
+                </animate>
+                </path>
+              </svg>
+        </div>
+        <h1 class="text">dot.</h1>
+        <h2 class="text2">GDS</h2>
+        <p class="text3">Грядёт новая эра приватных серверов по Geometry Dash</p>
+    </section>
 </body>
-
 </html>

@@ -1,1 +1,1 @@
-# WEGDPS List.
+# Тизер dot.GDS
